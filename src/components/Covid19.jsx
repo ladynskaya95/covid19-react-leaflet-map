@@ -4,8 +4,19 @@ import Loading from "./Loading";
 import CovidMap from "./CovidMap";
 import Legend from "./Legend";
 
+import LoadCountriesTask from "../tasks/LoadCountriesTask";
+
 const Covid19 = () => {
     const [countries, setCountries] = useState([]);
+
+     const load = () => {
+       console.log("load");
+       const loadCountriesTask = new LoadCountriesTask();
+       loadCountriesTask.load((countries) => setCountries(countries));
+     };
+
+     useEffect(load, []);
+     
   return (
     <div>
       {countries.length === 0 ? (
