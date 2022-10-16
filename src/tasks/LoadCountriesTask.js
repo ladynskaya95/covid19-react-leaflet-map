@@ -1,8 +1,12 @@
 import { features } from "../data/countries.json";
 
-const LoadCountriesTask = () => {
+class LoadCountriesTask  {
+
+  load= (setState) => {
+    setState(features)
+  }
+
   
-  return <div>LoadCountriesTask</div>;
 };
 
 export default LoadCountriesTask;

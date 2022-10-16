@@ -16,7 +16,7 @@ const Covid19 = () => {
      };
 
      useEffect(load, []);
-     
+
   return (
     <div>
       {countries.length === 0 ? (
