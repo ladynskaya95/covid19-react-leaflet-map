@@ -4,6 +4,7 @@ class LoadCountriesTask  {
 
   load= (setState) => {
     setState(features)
+    console.log(features)
   }
 
   
