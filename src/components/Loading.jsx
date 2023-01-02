@@ -11,13 +11,13 @@ const Loading = () => {
       }}
     >
       <div className="spinner-grow text-success" role="status">
-        <span className="sr-only">Loading...</span>
+        <span className="sr-only"></span>
       </div>
       <div className="spinner-grow text-danger" role="status">
-        <span className="sr-only">Loading...</span>
+        <span className="sr-only"></span>
       </div>
       <div className="spinner-grow text-info" role="status">
-        <span className="sr-only">Loading...</span>
+        <span className="sr-only"></span>
       </div>
     </div>
   );

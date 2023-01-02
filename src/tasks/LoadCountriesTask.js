@@ -1,5 +1,6 @@
 import papa from "papaparse";
 import { features } from "../data/countries.json";
+import legendItems from "../entities/LegendItems";
 
 class LoadCountriesTask {
   covidUrl =
@@ -33,18 +34,18 @@ class LoadCountriesTask {
         country.properties.confirmedText =
           this.#formatNumberWithCommas(confirmed);
       }
-      // this.#setCountryColor(country);
+      this.#setCountryColor(country);
     }
 
     this.setState(features);
   };
-  // #setCountryColor = (country) => {
-  //   const legendItem = legendItems.find((item) =>
-  //     item.isFor(country.properties.confirmed)
-  //   );
+  #setCountryColor = (country) => {
+    const legendItem = legendItems.find((item) =>
+      item.isFor(country.properties.confirmed)
+    );
 
-  //   if (legendItem != null) country.properties.color = legendItem.color;
-  // };
+    if (legendItem != null) country.properties.color = legendItem.color;
+  };
 
   #formatNumberWithCommas = (number) => {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
