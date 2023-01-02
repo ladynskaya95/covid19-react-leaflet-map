@@ -27,6 +27,7 @@ const Covid19 = () => {
         <Loading />
       ) : (
         <div>
+          <div className="title">В паралельному всесвіті, де коронавірус існує...</div>
           <CovidMap countries={countries} />
           <Legend legendItems={legendItemsReverse} />
         </div>
